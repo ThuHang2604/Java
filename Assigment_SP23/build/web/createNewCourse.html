@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Create New Course</h1>
+        <form action="MainController">
+            <table>               
+                <tr>
+                    <td>Course's Name</td>
+                    <td><input type="text" name="txtName" pattern="\w{3,50}" required /> (3 - 50 chars)</td>
+                </tr>
+                <tr>
+                    <td>Tuition fee</td>
+                    <td><input type="number" name="txtFee" required min="1000000" /> (>1000000)</td>
+                </tr>
+                <tr>
+                    <td>Image</td>
+                    <td><input type="text" name="txtImg" required=""/> (images/*.jpg)</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><input type="text" name="txtDescription" /></td>
+                </tr>
+                <tr>
+                    <td>Start Date</td>
+                    <td><input type="date" name="txtStartDate" required pattern="\d{4}-\d{2}-\d{2}" /></td>
+                </tr>
+                <tr>
+                    <td>End Date</td>
+                    <td><input type="date" name="txtEndDate" required pattern="\d{4}-\d{2}-\d{2}" /></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><input type="text" name="txtStatus" required pattern="[01]" />(1:active; 0:inactive)</td>
+                </tr>
+                <tr>
+                    <td>Category ID</td>
+                    <td><select name="txtCateID" required="">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                        (1:Percussion, 2:Stringed, 3:Keyboard, 4:Wind)
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Create" name="option"/></td>
+                </tr>
+            </table>
+        </form>    
+    </body>
+</html>
